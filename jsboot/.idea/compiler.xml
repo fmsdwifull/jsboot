@@ -11,9 +11,11 @@
         <module name="mapper" />
         <module name="model" />
         <module name="service" />
-        <module name="test" />
         <module name="web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

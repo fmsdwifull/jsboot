@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nice.mapper.PermissionMapper">
+    <resultMap id="BaseResultMap" type="com.nice.model.Permission" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="url" property="url" jdbcType="VARCHAR" />
+        <result column="path" property="path" jdbcType="VARCHAR" />
+        <result column="component" property="component" jdbcType="VARCHAR" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="iconCls" property="iconCls" jdbcType="VARCHAR" />
+        <result column="parentId" property="parentId" jdbcType="INTEGER" />
+        <result column="enabled" property="enabled" jdbcType="BIT" />
+        <association property="meta" javaType="com.nice.model.Meta">
+            <result column="keepAlive" property="keepAlive" jdbcType="BIT" />
+            <result column="requireAuth" property="requireAuth" jdbcType="BIT" />
+        </association>
+    </resultMap>
+    <resultMap id="PermissionWithRole" type="com.nice.model.Permission" extends="BaseResultMap">
+        <collection property="roles" ofType="com.nice.model.Role">
+            <id column="rid" property="id"/>
+            <result column="rname" property="name"/>
+            <result column="rnameZh" property="nameZh"/>
+        </collection>
+    </resultMap>
+    <select id="getAllPermissionsWithRole" resultMap="PermissionWithRole">
+        select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnameZh from permission m,permission_role mr,role r where m.`id`=mr.`mid` and mr.`rid`=r.`id` order by m.`id`
+    </select>
+</mapper>
