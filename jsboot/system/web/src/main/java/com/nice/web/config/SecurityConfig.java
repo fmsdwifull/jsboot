@@ -18,9 +18,15 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy;
 import org.springframework.security.web.session.ConcurrentSessionFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
+import java.util.Arrays;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -66,7 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .csrf().disable();
-
+        //http.cors(withDefaults());
         //这个是要替代UsernamePasswordAuthenticationFilter吗？还是什么意思
         http.addFilterAt(loginFilter(), UsernamePasswordAuthenticationFilter.class);
     }
@@ -76,6 +82,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         LoginFilter loginFilter = new LoginFilter();
         loginFilter.setAuthenticationSuccessHandler((request, response, authentication) -> {
                     response.setContentType("application/json;charset=utf-8");
+                    response.setHeader("Access-Control-Allow-Origin", "*");
+                    response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
                     User user = (User) authentication.getPrincipal();
                     user.setPassword(null);
@@ -88,26 +96,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         );
         loginFilter.setAuthenticationFailureHandler((request, response, exception) -> {
                     response.setContentType("application/json;charset=utf-8");
+                    response.setHeader("Access-Control-Allow-Origin", "*");
+                    response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
-                    RespJson respBean = RespJson.error(exception.getMessage());
+                    RespJson respJson = RespJson.error(exception.getMessage());
                     if (exception instanceof LockedException) {
-                        respBean.setMsg("账户被锁定，请联系管理员!");
+                        respJson.setMsg("账户被锁定，请联系管理员!");
                     } else if (exception instanceof CredentialsExpiredException) {
-                        respBean.setMsg("密码过期，请联系管理员!");
+                        respJson.setMsg("密码过期，请联系管理员!");
                     } else if (exception instanceof AccountExpiredException) {
-                        respBean.setMsg("账户过期，请联系管理员!");
+                        respJson.setMsg("账户过期，请联系管理员!");
                     } else if (exception instanceof DisabledException) {
-                        respBean.setMsg("账户被禁用，请联系管理员!");
+                        respJson.setMsg("账户被禁用，请联系管理员!");
                     } else if (exception instanceof BadCredentialsException) {
-                        respBean.setMsg("用户名或者密码输入错误，请重新输入!");
+                        respJson.setMsg("用户名或者密码输入错误，请重新输入!");
                     }
-                    out.write(new ObjectMapper().writeValueAsString(respBean));
+                    out.write(new ObjectMapper().writeValueAsString(respJson));
                     out.flush();
                     out.close();
                 }
         );
         loginFilter.setAuthenticationManager(authenticationManagerBean());
-        loginFilter.setFilterProcessesUrl("/doLogin");
+        loginFilter.setFilterProcessesUrl("/dologin");
         ConcurrentSessionControlAuthenticationStrategy sessionStrategy = new ConcurrentSessionControlAuthenticationStrategy(sessionRegistry());
         sessionStrategy.setMaximumSessions(1);
         loginFilter.setSessionAuthenticationStrategy(sessionStrategy);
@@ -117,5 +127,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     SessionRegistryImpl sessionRegistry() {
         return new SessionRegistryImpl();
+    }
+
+    @Bean
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9527"));
+        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 }
