@@ -82,8 +82,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         LoginFilter loginFilter = new LoginFilter();
         loginFilter.setAuthenticationSuccessHandler((request, response, authentication) -> {
                     response.setContentType("application/json;charset=utf-8");
-                    response.setHeader("Access-Control-Allow-Origin", "*");
-                    response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+                    //response.setHeader("Access-Control-Allow-Origin", "*");
+                    //response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
                     User user = (User) authentication.getPrincipal();
                     user.setPassword(null);
@@ -96,8 +96,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         );
         loginFilter.setAuthenticationFailureHandler((request, response, exception) -> {
                     response.setContentType("application/json;charset=utf-8");
-                    response.setHeader("Access-Control-Allow-Origin", "*");
-                    response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+                    //response.setHeader("Access-Control-Allow-Origin", "*");
+                    //response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
                     RespJson respJson = RespJson.error(exception.getMessage());
                     if (exception instanceof LockedException) {
