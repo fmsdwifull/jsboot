@@ -10,14 +10,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>system</artifactId>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.0.RELEASE</version>
+        </dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
+    <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>5.5.2</version>
+        <scope>test</scope>
+    </dependency>
+    </dependencies>
+
     <packaging>pom</packaging>
     <modules>
+        <module>common</module>
         <module>mapper</module>
         <module>service</module>
         <module>model</module>
         <module>web</module>
-        <module>common</module>
-        <module>test</module>
+
     </modules>
 
 

@@ -2,8 +2,9 @@ package com.nice.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nice.model.RespJson;
+import com.nice.model.SysUser;
 import com.nice.model.User;
-import com.nice.service.CustomUserService;
+import com.nice.service.impl.CustomerUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,31 +15,38 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy;
-import org.springframework.security.web.session.ConcurrentSessionFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import java.util.Arrays;
-
-import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    CustomUserService customUserService;
+    CustomerUserDetailService CustomerUserDetailService;
     @Autowired
     CustomFilterInvocationSecurityMetadataSource customFilterInvocationSecurityMetadataSource;
     @Autowired
     CustomUrlDecisionManager customUrlDecisionManager;
+    //@Autowired
+    //CustomUsernamePasswordAuthentionProvider customUsernamePasswordAuthentionProvider;
+
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(customUserService);
+        auth.userDetailsService(CustomerUserDetailService);
     }
 
     @Override
@@ -85,9 +93,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     //response.setHeader("Access-Control-Allow-Origin", "*");
                     //response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
-                    User user = (User) authentication.getPrincipal();
-                    user.setPassword(null);
-                    RespJson ok = RespJson.ok("登录成功!", user);
+                    SysUser sysUser = (SysUser) authentication.getPrincipal();
+                    sysUser.setPassword(null);
+                    RespJson ok = RespJson.ok("登录成功!", sysUser);
                     String s = new ObjectMapper().writeValueAsString(ok);
                     out.write(s);
                     out.flush();
@@ -138,4 +146,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
+
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        //super.configure(auth);
+//        //auth.userDetailsService(customUserService).passwordEncoder(new BCryptPasswordEncoder());
+//        auth.authenticationProvider(customUsernamePasswordAuthentionProvider);
+//    }
+
 }

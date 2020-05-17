@@ -20,20 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/LoginFilter.java">
+      <file leaf-file-name="SysUserRoleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="53" column="92" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="92" />
+            <state relative-caret-position="95">
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/SecurityConfig.java">
+      <file leaf-file-name="RbacController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/RbacController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+            <state relative-caret-position="238">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,15 +41,86 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RespJson.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RespJson.java">
+      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="142">
+              <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
               <folding>
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MethodProxy.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../../repository/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1976">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/LoginFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3667">
+              <caret line="323" column="23" selection-start-line="323" selection-start-column="23" selection-end-line="323" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/MenuMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1957">
+              <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomUsernamePasswordAuthentionProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomUsernamePasswordAuthentionProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysRole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -59,21 +130,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="spring-beans.schema" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Menu</find>
-      <find>RespBean</find>
-      <find>tuserows</find>
-      <find>sessionR</find>
-      <find>tUserows</find>
-      <find>nice.model.Role</find>
       <find>customUserService</find>
       <find>getUsernameParameter</find>
       <find>dolo</find>
@@ -83,6 +150,27 @@
       <find>checkCode</find>
       <find>Hr</find>
       <find>500</find>
+      <find>m2</find>
+      <find>common</find>
+      <find>SERVIC</find>
+      <find>spring</find>
+      <find>StrFormatter</find>
+      <find>CustomUserService</find>
+      <find>permissionService</find>
+      <find>permission</find>
+      <find>buildMenus</find>
+      <find>selectMenuListByRoleId</find>
+      <find>path</find>
+      <find>SysMenu</find>
+      <find>MenuList</find>
+      <find>SysMenuResult</find>
+      <find>user</find>
+      <find>getUserRolesById</find>
+      <find>deptId</find>
+      <find>userName</find>
+      <find>password</find>
+      <find>User</find>
+      <find>sys_role_menu</find>
     </findStrings>
     <replaceStrings>
       <replace>Permission</replace>
@@ -91,44 +179,70 @@
       <replace>throws</replace>
       <replace>respJson</replace>
       <replace>User</replace>
+      <replace>Menu</replace>
+      <replace>CustomerUserDetailService</replace>
+      <replace>menuService</replace>
+      <replace>sysMenu</replace>
+      <replace>sys_menu_role</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\Java\workspace\vsboot\jsboot\system</dir>
+      <dir>D:\Java\workspace\vsboot\jsboot\</dir>
+    </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/system/pom.xml" />
-        <option value="$PROJECT_DIR$/system/service/pom.xml" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/HelloMulModule.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/HelloMulModulex.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/system/service/src/main/java/service/TestMulModule.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/HelloMulModule.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RespJson.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Permission.java" />
-        <option value="$PROJECT_DIR$/system/model/pom.xml" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/User.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Role.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Meta.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/PermissionRole.java" />
-        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/UserRole.java" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserRoleMapper.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomFilterInvocationSecurityMetadataSource.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomUrlDecisionManager.java" />
-        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/CustomUserService.java" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.fxml" />
-        <option value="$PROJECT_DIR$/system/web/pom.xml" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/WebApplication.java" />
-        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/PermissionService.java" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.java" />
-        <option value="$PROJECT_DIR$/system/web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/system/mapper/pom.xml" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.xml" />
         <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/system/web/src/test/java/com/nice/service/RbacServiceTest.java" />
+        <option value="$PROJECT_DIR$/system/web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/RbacService.java" />
+        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/ICustomUserService.java" />
+        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/RbacManager.java" />
+        <option value="$PROJECT_DIR$/system/web/src/test/java/com/nice/service/RbacService.java" />
+        <option value="$PROJECT_DIR$/system/web/src/test/java/com/nice/service/IMenuService.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Meun.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/BaseEntity.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/User.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysRoleMenu.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysUserRole.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserRoleMapper.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserMapper.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.java" />
         <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/LoginFilter.java" />
+        <option value="$PROJECT_DIR$/system/common/src/main/java/com/nice/common/StrFormatter.java" />
+        <option value="$PROJECT_DIR$/system/common/pom.xml" />
+        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/impl/CustomerUserDetailService.java" />
+        <option value="$PROJECT_DIR$/system/common/src/main/java/com/nice/common/StringUtils.java" />
+        <option value="$PROJECT_DIR$/system/common/src/main/java/com/nice/common/HttpStatus.java" />
+        <option value="$PROJECT_DIR$/system/web/pom.xml" />
+        <option value="$PROJECT_DIR$/system/pom.xml" />
+        <option value="$PROJECT_DIR$/system/model/pom.xml" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/AjaxResult.java" />
+        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/WebApplication.java" />
+        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomFilterInvocationSecurityMetadataSource.java" />
+        <option value="$PROJECT_DIR$/system/web/src/test/java/com/nice/web/WebApplicationTests.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RouterVo.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/MetaVo.java" />
+        <option value="$PROJECT_DIR$/system/common/src/main/java/com/nice/common/UserConstants.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/TreeSelect.java" />
+        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/IMenuService.java" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysMenu.java" />
+        <option value="$PROJECT_DIR$/system/service/src/main/java/com/nice/service/impl/MenuService.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/MenuMapper.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserMapper.xml" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysRole.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.xml" />
+        <option value="$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysUser.java" />
+        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/RbacController.java" />
+        <option value="$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/MenuMapper.xml" />
+        <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomUsernamePasswordAuthentionProvider.java" />
         <option value="$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/SecurityConfig.java" />
       </list>
     </option>
@@ -140,6 +254,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Java\repository" />
+        <option name="userSettingsFile" value="D:\Java\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -157,9 +277,12 @@
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="true" />
+      <hideEmptyPackages ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -218,6 +341,67 @@
               <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
               <item name="jsboot" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jsboot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jsboot" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -261,13 +445,13 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,15 +461,36 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RuoYi-Vue/ruoyi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.nice.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\workspace\vsboot\jsboot\system\common\src\main\java\com\nice\common" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nice.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\workspace\vsboot\jsboot\system\mapper\src\main\java\com\nice\mapper" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.nice.mapper" />
+      <recent name="com.nice.model" />
+      <recent name="com.nice.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -300,9 +505,124 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.WebApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="RbacServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nice.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.nice.service.RbacServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RbacServiceTest.menuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nice.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.nice.service.RbacServiceTest" />
+      <option name="METHOD_NAME" value="menuTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="WebApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nice.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nice.web" />
+      <option name="MAIN_CLASS_NAME" value="com.nice.web.WebApplicationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="WebApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nice.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nice.web" />
+      <option name="MAIN_CLASS_NAME" value="com.nice.web.WebApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="WebApplicationTests.menuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nice.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.nice.web" />
+      <option name="MAIN_CLASS_NAME" value="com.nice.web.WebApplicationTests" />
+      <option name="METHOD_NAME" value="menuTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -319,6 +639,16 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="common" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
     </configuration>
     <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="web" />
@@ -346,6 +676,23 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.WebApplication" />
+      <item itemvalue="JUnit.RbacServiceTest.menuTest" />
+      <item itemvalue="JUnit.RbacServiceTest" />
+      <item itemvalue="JUnit.WebApplicationTests" />
+      <item itemvalue="JUnit.WebApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.WebApplicationTests.menuTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RbacServiceTest.menuTest" />
+        <item itemvalue="JUnit.WebApplicationTests.menuTest" />
+        <item itemvalue="JUnit.WebApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.WebApplicationTests" />
+        <item itemvalue="JUnit.RbacServiceTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -361,18 +708,63 @@
       <workItem from="1589423451376" duration="11695000" />
       <workItem from="1589505897431" duration="18251000" />
       <workItem from="1589537066715" duration="1951000" />
+      <workItem from="1589547758797" duration="5083000" />
+      <workItem from="1589588995043" duration="8433000" />
+      <workItem from="1589606099485" duration="1150000" />
+      <workItem from="1589609431246" duration="402000" />
+      <workItem from="1589610630690" duration="2609000" />
+      <workItem from="1589613306502" duration="130000" />
+      <workItem from="1589613587044" duration="506000" />
+      <workItem from="1589614173447" duration="408000" />
+      <workItem from="1589616162902" duration="251000" />
+      <workItem from="1589616665441" duration="93000" />
+      <workItem from="1589627048643" duration="18639000" />
+      <workItem from="1589678621992" duration="5960000" />
+      <workItem from="1589688695891" duration="857000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 38m 19s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 40m 19s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 42m 38s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 45m 44s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 48m 15s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 51m 12s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 51m 53s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 10h 52m 29s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 11h 01m 04s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RbacServiceTest_menuTest - 2020.05.16 at 11h 02m 05s.xml">
+      <configuration name="RbacServiceTest.menuTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40072000" />
+    <option name="totallyTimeSpent" value="84593000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18759455" side_tool="true" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18839541" side_tool="true" weight="0.34506088" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3191801" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="4" />
@@ -381,18 +773,18 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37397036" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3727034" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32784185" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32677165" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32838285" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81240547" visible="true" weight="0.34596375" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81160456" weight="0.35695538" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32843137" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" weight="0.27227724" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.87758344" visible="true" weight="0.2602118" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.87758344" visible="true" weight="0.29097223" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -407,9 +799,10 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81240547" visible="true" weight="0.34596375" />
       <window_info anchor="bottom" id="Spring" order="11" weight="0.32843137" />
       <window_info id="Image Layers" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81240547" visible="true" weight="0.34596375" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.35313532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" order="5" />
@@ -434,9 +827,8 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.35313532" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37397036" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,306 +839,344 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/RbacController.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/LoginFilter.java">
+    <entry file="file://$PROJECT_DIR$/system/service/src/main/java/com/nice/service/impl/CustomUserService.java" />
+    <entry file="file://$PROJECT_DIR$/system/web/src/test/java/com/nice/service/RbacService.java" />
+    <entry file="file://$PROJECT_DIR$/system/web/src/test/java/com/nice/service/IMenuService.java" />
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Meun.java" />
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1007">
-          <caret line="53" column="92" lean-forward="true" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="92" />
+        <state relative-caret-position="1748">
+          <caret line="149" column="5" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RespJson.java">
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="76">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../repository/org/springframework/security/spring-security-core/5.2.4.RELEASE/spring-security-core-5.2.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysRoleMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysUserRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserRoleMapper.java" />
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/common/src/main/java/com/nice/common/StrFormatter.java" />
+    <entry file="file://$PROJECT_DIR$/system/mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" selection-start-line="19" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1664">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/AjaxResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding>
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1836#1837#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/system/common/src/main/java/com/nice/common/HttpStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="97" column="20" lean-forward="true" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        <state relative-caret-position="154">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/common/src/main/java/com/nice/common/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/WebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/PermissionRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomFilterInvocationSecurityMetadataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" selection-start-line="23" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/src/test/java/com/nice/web/WebApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RouterVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/MetaVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/common/src/main/java/com/nice/common/UserConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/TreeSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/service/src/main/java/com/nice/service/IMenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/service/src/main/java/com/nice/service/impl/MenuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="222" column="52" selection-start-line="222" selection-start-column="52" selection-end-line="222" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/MenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.tld" />
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/service/src/main/java/com/nice/service/impl/CustomerUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="78" column="37" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/schemas/maven-4.0.0.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/WebMvcConfig.java" />
-    <entry file="file://$PROJECT_DIR$/system/web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CorsConfig.java" />
-    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/PermissionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        <state relative-caret-position="76">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/context/SecurityContextPersistenceFilter.class">
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/SysUserRoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="95">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/context/request/async/WebAsyncManagerIntegrationFilter.class">
+    <entry file="jar://$PROJECT_DIR$/../../../repository/org/springframework/spring-context/5.2.0.RELEASE/spring-context-5.2.0.RELEASE.jar!/org/springframework/context/annotation/ConfigurationClassEnhancer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="150">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
+    <entry file="jar://$PROJECT_DIR$/../../../repository/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="1976">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/DelegatingFilterProxy.class">
+    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/SysUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/RequestContextFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="34" column="157" selection-start-line="34" selection-start-column="157" selection-end-line="34" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/FormContentFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/core/StandardWrapperValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="296" selection-start-line="296" selection-end-line="296" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/core/StandardContextValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/tomcat/util/net/SocketProcessorBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/tomcat/util/net/NioEndpoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="425" selection-start-line="425" selection-end-line="425" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/coyote/AbstractProtocol.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="778" selection-start-line="778" selection-end-line="778" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/coyote/AbstractProcessorLight.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/coyote/http11/Http11Processor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="281" selection-start-line="281" selection-end-line="281" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="436" selection-start-line="436" selection-end-line="436" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/core/StandardEngineValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/valves/ErrorReportValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/core/StandardHostValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="38" column="103" selection-start-line="38" selection-start-column="103" selection-end-line="38" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.34/tomcat-embed-core-9.0.34.jar!/org/apache/catalina/authenticator/AuthenticatorBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="351" selection-start-line="351" selection-end-line="351" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/authentication/logout/LogoutFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="1148" selection-start-line="1148" selection-end-line="1148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomFilterInvocationSecurityMetadataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/model/src/main/java/com/nice/model/RespJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="3667">
+          <caret line="323" column="23" selection-start-line="323" selection-start-column="23" selection-end-line="323" selection-end-column="23" />
           <folding>
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-web/5.2.4.RELEASE/spring-security-web-5.2.4.RELEASE.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="53" column="92" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="92" />
+        <state relative-caret-position="722">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/mapper/src/main/java/com/nice/mapper/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1957">
+          <caret line="103" column="31" selection-start-line="103" selection-start-column="31" selection-end-line="103" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/CustomUsernamePasswordAuthentionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+        <state relative-caret-position="142">
+          <caret line="131" column="27" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/web/src/main/java/com/nice/web/controller/RbacController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -805,7 +1235,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>common</last-edited>
+          <last-edited>mapper</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -833,7 +1263,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.4353206" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

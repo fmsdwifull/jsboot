@@ -25,4 +25,18 @@
     <select id="getAllPermissionsWithRole" resultMap="PermissionWithRole">
         select m.*,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnameZh from permission m,permission_role mr,role r where m.`id`=mr.`mid` and mr.`rid`=r.`id` order by m.`id`
     </select>
+
+
+    <!--<resultMap id="PermissonMeta" type="com.nice.model.Permission" extends="BaseResultMap">-->
+    <!--</resultMap>-->
+    <!--select distinct m1.*,m2.`id` as id2,m2.`component` as component2,m2.`enabled` as enabled2,m2.`iconCls` as iconCls2,m2.`keepAlive` as keepAlive2,m2.`name` as name2,m2.`parentId` as parentId2,m2.`requireAuth` as requireAuth2,m2.`path` as path2 from menu m1,menu m2,hr_role hrr,menu_role mr where m1.`id`=m2.`parentId` and hrr.`hrid`=#{hrid} and hrr.`rid`=mr.`rid` and mr.`mid`=m2.`id` and m2.`enabled`=true order by m1.`id`,m2.`id`-->
+
+    <select id="getPermissionByUid" resultMap="PermissionWithRole">
+        select distinct m.* from permission m,user_role ur,permission_role mr
+             where  ur.`hrid`=#{uid}
+             and ur.`rid`=mr.`rid`
+             and mr.`mid`=m.`id`
+             and m.`enabled`=true
+             order by m.`id`
+    </select>
 </mapper>

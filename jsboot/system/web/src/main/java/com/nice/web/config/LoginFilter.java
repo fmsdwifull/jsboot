@@ -1,6 +1,7 @@
 package com.nice.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nice.model.SysUser;
 import com.nice.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -49,8 +50,8 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(
                     username, password);
             setDetails(request, authRequest);
-            User principal = new User();
-            principal.setUsername(username);
+            SysUser principal = new SysUser();
+            principal.setUserName(username);
             sessionRegistry.registerNewSession(request.getSession(true).getId(), principal);
             return this.getAuthenticationManager().authenticate(authRequest);
         } else {

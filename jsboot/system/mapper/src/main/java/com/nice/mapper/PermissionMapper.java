@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface PermissionMapper {
     List<Permission> getAllPermissionsWithRole();
+    List<Permission> getPermissionByUid(Integer uid);
 }

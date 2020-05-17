@@ -2,7 +2,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: mysql
+    password:
     url: jdbc:mysql://localhost:3306/jsboot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
   redis:
     host: 127.0.0.1
@@ -21,4 +21,7 @@ fastdfs:
 flyway:
     baselineOnMigrate = true
 
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

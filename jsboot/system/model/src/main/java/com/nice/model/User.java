@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-public class User implements UserDetails {
+public class User implements  UserDetails{
     private Integer id;
 
     private String name;
