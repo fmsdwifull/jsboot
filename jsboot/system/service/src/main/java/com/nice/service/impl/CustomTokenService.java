@@ -4,8 +4,11 @@ import com.nice.common.*;
 import com.nice.model.LoginUser;
 import eu.bitwalker.useragentutils.UserAgent;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +18,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class TokenService
+public class CustomTokenService
 {
     // 令牌自定义标识
     @Value("${token.header}")
@@ -54,6 +57,7 @@ public class TokenService
             String uuid = (String) claims.get(Constants.LOGIN_USER_KEY);
             String userKey = getTokenKey(uuid);
             LoginUser user = redisCache.getCacheObject(userKey);
+            System.out.print(user);
             return user;
         }
         return null;

@@ -3,6 +3,7 @@ package com.nice.mapper;
 import com.nice.model.SysMenu;
 
 import java.util.List;
+import java.util.Set;
 
 public interface MenuMapper {
     List<SysMenu> getAllMenuWithRole();
@@ -16,4 +17,8 @@ public interface MenuMapper {
     List<SysMenu> selectMenuList(SysMenu menu);
 
     List<SysMenu> selectMenuListByUserId(SysMenu menu);
+
+    Set<String> selectMenuPermsByUserId(Long userId);
+
+    Set<String> getRolesByUid(Long userId);
 }

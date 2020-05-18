@@ -24,7 +24,7 @@ public class AddressUtils
         {
             return "内网IP";
         }
-        if (RuoYiConfig.isAddressEnabled())
+        if (CustomerConfig.isAddressEnabled())
         {
             String rspStr = HttpUtils.sendPost(IP_URL, "ip=" + ip);
             if (StringUtils.isEmpty(rspStr))

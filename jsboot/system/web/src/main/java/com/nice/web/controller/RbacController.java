@@ -1,10 +1,10 @@
 package com.nice.web.controller;
 
-import com.nice.model.AjaxResult;
-import com.nice.model.SysMenu;
-import com.nice.model.SysUser;
-import com.nice.model.User;
+import com.nice.common.ServletUtils;
+import com.nice.model.*;
 import com.nice.service.IMenuService;
+import com.nice.service.IRoleService;
+import com.nice.service.impl.CustomTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,11 @@ import java.util.Set;
 public class RbacController {
     @Autowired
     private IMenuService menuService;
+    @Autowired
+    private IRoleService roleService;
 
+    @Autowired
+    CustomTokenService customTokenService;
     /**
      * 获取路由信息
      *
@@ -36,19 +40,19 @@ public class RbacController {
      *
      * @return 用户信息
      */
-    @GetMapping("/getInfo")
+    @GetMapping("/getinfo")
     public AjaxResult getInfo()
     {
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = customTokenService.getLoginUser(ServletUtils.getRequest());
         SysUser user = loginUser.getUser();
         // 角色集合
-        Set<String> roles = permissionService.getRolePermission(user);
+        Set<String> roles = roleService.getRolesByUid(user.getUserId());
         // 权限集合
-        Set<String> permissions = permissionService.getMenuPermission(user);
+        Set<String> menus = menuService.getMenusByUid(user.getUserId());
         AjaxResult ajax = AjaxResult.success();
         ajax.put("user", user);
         ajax.put("roles", roles);
-        ajax.put("permissions", permissions);
+        ajax.put("menus", menus);
         return ajax;
     }
 }

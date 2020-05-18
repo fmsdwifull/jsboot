@@ -14,6 +14,13 @@ import java.util.*;
 public class MenuService implements IMenuService {
     @Autowired
     MenuMapper menuMapper;
+
+
+    @Override
+    public Set<String> getMenusByUid(Long uid) {
+        return menuMapper.selectMenuPermsByUserId(uid);
+    }
+
     //@Autowired
     //private SysRoleMenuMapper roleMenuMapper;
     public List<SysMenu> getAllMenuWithRole()
@@ -42,7 +49,7 @@ public class MenuService implements IMenuService {
      * @param menu 菜单信息
      * @return 结果
      */
-    @Override
+    //@Override
     public String checkMenuNameUnique(SysMenu menu)
     {
         Long menuId = StringUtils.isNull(menu.getMenuId()) ? -1L : menu.getMenuId();
@@ -225,10 +232,6 @@ public class MenuService implements IMenuService {
         return menuList;
     }
 
-    @Override
-    public Set<String> selectMenuPermsByUserId(Long userId) {
-        return null;
-    }
 
     @Override
     public List<SysMenu> buildMenuTree(List<SysMenu> menus) {
@@ -240,10 +243,6 @@ public class MenuService implements IMenuService {
         return null;
     }
 
-    @Override
-    public SysMenu selectMenuById(Long menuId) {
-        return null;
-    }
 
     @Override
     public boolean hasChildByMenuId(Long menuId) {

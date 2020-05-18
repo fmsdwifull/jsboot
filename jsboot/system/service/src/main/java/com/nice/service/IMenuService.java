@@ -1,9 +1,6 @@
 package com.nice.service;
 
-import com.nice.model.Permission;
-import com.nice.model.RouterVo;
-import com.nice.model.SysMenu;
-import com.nice.model.TreeSelect;
+import com.nice.model.*;
 
 import java.util.List;
 import java.util.Set;
@@ -36,7 +33,7 @@ public interface IMenuService {
      * @param userId 用户ID
      * @return 权限列表
      */
-    public Set<String> selectMenuPermsByUserId(Long userId);
+    public Set<String> getMenusByUid(Long userId);
 
     /**
      * 根据用户ID查询菜单树信息
@@ -78,13 +75,6 @@ public interface IMenuService {
      */
     public List<TreeSelect> buildMenuTreeSelect(List<SysMenu> menus);
 
-    /**
-     * 根据菜单ID查询信息
-     *
-     * @param menuId 菜单ID
-     * @return 菜单信息
-     */
-    public SysMenu selectMenuById(Long menuId);
 
     /**
      * 是否存在菜单子节点
@@ -102,29 +92,4 @@ public interface IMenuService {
      */
     public boolean checkMenuExistRole(Long menuId);
 
-    /**
-     * 新增保存菜单信息
-     *
-     * @param menu 菜单信息
-     * @return 结果
-     */
-
-
-    /**
-     * 修改保存菜单信息
-     *
-     * @param menu 菜单信息
-     * @return 结果
-     */
-
-
-
-
-    /**
-     * 校验菜单名称是否唯一
-     *
-     * @param menu 菜单信息
-     * @return 结果
-     */
-    public String checkMenuNameUnique(SysMenu menu);
 }

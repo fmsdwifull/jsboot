@@ -1,10 +1,8 @@
 package com.nice.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nice.model.AjaxResult;
-import com.nice.model.RespJson;
-import com.nice.model.SysUser;
-import com.nice.model.User;
+import com.nice.model.*;
+import com.nice.service.impl.CustomTokenService;
 import com.nice.service.impl.CustomerUserDetailService;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +10,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.core.token.Token;
@@ -29,6 +29,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import javax.annotation.Resource;
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -40,6 +41,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     CustomFilterInvocationSecurityMetadataSource customFilterInvocationSecurityMetadataSource;
     @Autowired
     CustomUrlDecisionManager customUrlDecisionManager;
+    @Autowired
+    CustomTokenService tokenService;
+    @Autowired
+    AuthenticationManager authenticationManager;
     //@Autowired
     //CustomUsernamePasswordAuthentionProvider customUsernamePasswordAuthentionProvider;
 
@@ -48,6 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -100,6 +110,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     PrintWriter out = response.getWriter();
                     SysUser sysUser = (SysUser) authentication.getPrincipal();
                     String username = sysUser.getUsername();
+                    String password = sysUser.getPassword();
 
                     //sysUser.setPassword(null);
                     //authentication.getCredentials().
@@ -118,8 +129,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                    RespJson ok = RespJson.ok("登录成功!", sysUser);
 //                    String s = new ObjectMapper().writeValueAsString(ok);
                     HashMap hashMap = new HashMap();
-                    hashMap.put("token","--SDFSKKKKK====SFFDSEEEEE");
-                    hashMap.put("username",username);
+
+                    // 用户验证
+                    //Authentication auth = null;
+                    //auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, "admin123"));
+                   // LoginUser loginUser = (LoginUser) auth.getPrincipal();
+                    LoginUser loginUser = new LoginUser();
+                    sysUser.setPassword("admin123");
+                    loginUser.setUser(sysUser);
+
+                    // 生成token
+                     String token = tokenService.createToken(loginUser);
+                    hashMap.put("token",token);
                     AjaxResult ajax = AjaxResult.success(hashMap);
                     String s = new ObjectMapper().writeValueAsString(ajax);
 //                  String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),

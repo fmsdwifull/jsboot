@@ -60,6 +60,9 @@ public class LoginUser implements UserDetails {
         this.user = user;
     }
 
+    public LoginUser() {
+    }
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
