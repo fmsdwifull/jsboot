@@ -1,10 +1,12 @@
 package com.nice.web.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nice.model.AjaxResult;
 import com.nice.model.RespJson;
 import com.nice.model.SysUser;
 import com.nice.model.User;
 import com.nice.service.impl.CustomerUserDetailService;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +16,10 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.core.token.Token;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
@@ -25,7 +30,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.io.PrintWriter;
-import java.util.Arrays;
+import java.util.*;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -94,9 +99,32 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     //response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
                     SysUser sysUser = (SysUser) authentication.getPrincipal();
-                    sysUser.setPassword(null);
-                    RespJson ok = RespJson.ok("登录成功!", sysUser);
-                    String s = new ObjectMapper().writeValueAsString(ok);
+                    String username = sysUser.getUsername();
+
+                    //sysUser.setPassword(null);
+                    //authentication.getCredentials().
+                    Collection<? extends GrantedAuthority> authorities = sysUser.getAuthorities();
+                    Set<String> roles = new HashSet<>();
+
+                    if (CollectionUtils.isNotEmpty(authorities)) {
+                        for (GrantedAuthority authority : authorities) {
+                            String roleName = authority.getAuthority();
+                            roles.add(roleName);
+                        }
+                    }
+                    //TokenService
+                    //JwtTokenPair  jwtTokenPair = jwtTokenGenerator.jwtTokenPair(username, roles, null);
+
+//                    RespJson ok = RespJson.ok("登录成功!", sysUser);
+//                    String s = new ObjectMapper().writeValueAsString(ok);
+                    HashMap hashMap = new HashMap();
+                    hashMap.put("token","--SDFSKKKKK====SFFDSEEEEE");
+                    hashMap.put("username",username);
+                    AjaxResult ajax = AjaxResult.success(hashMap);
+                    String s = new ObjectMapper().writeValueAsString(ajax);
+//                  String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),
+//                            loginBody.getUuid());
+//                    ajax.put(Constants.TOKEN, token);
                     out.write(s);
                     out.flush();
                     out.close();

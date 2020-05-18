@@ -19,6 +19,21 @@
 
     <dependencies>
         <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-jwt</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+        <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>common</artifactId>
             <version>${project.parent.version}</version>

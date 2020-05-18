@@ -82,8 +82,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: '111111'
+        username: 'ry',
+        password: 'admin123'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -97,6 +97,7 @@ export default {
       otherQuery: {}
     }
   },
+  // watch的作用是到底是什么
   watch: {
     $route: {
       handler: function(route) {
@@ -143,10 +144,12 @@ export default {
           this.loading = true
           this.$store.dispatch('user/login', this.loginForm)
             .then(() => {
+              // this.redirect 为什么是dashboard
               this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
               this.loading = false
             })
             .catch(() => {
+              alert('---fail--')
               this.loading = false
             })
         } else {

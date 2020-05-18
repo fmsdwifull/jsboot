@@ -34,11 +34,15 @@ const actions = {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
       login({ username: username.trim(), password: password }).then(response => {
+        // 这里很神奇，直接拿到res里面的data了
         const { data } = response
+        console.log('----------------3-------------------')
+        console.log(response)
         commit('SET_TOKEN', data.token)
         setToken(data.token)
         resolve()
       }).catch(error => {
+        console.log('----------------4-------------------')
         reject(error)
       })
     })
