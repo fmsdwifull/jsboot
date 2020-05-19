@@ -24,9 +24,6 @@ public class SysUser  extends BaseEntity implements UserDetails{
     /** 用户ID */
     private Long userId;
 
-    /** 部门ID */
-    private Long deptId;
-
     /** 用户账号 */
     private String userName;
 
@@ -110,16 +107,6 @@ public class SysUser  extends BaseEntity implements UserDetails{
     public static boolean isAdmin(Long userId)
     {
         return userId != null && 1L == userId;
-    }
-
-    public Long getDeptId()
-    {
-        return deptId;
-    }
-
-    public void setDeptId(Long deptId)
-    {
-        this.deptId = deptId;
     }
 
     @Size(min = 0, max = 30, message = "用户昵称长度不能超过30个字符")
@@ -278,7 +265,6 @@ public class SysUser  extends BaseEntity implements UserDetails{
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
                 .append("userId", getUserId())
-                .append("deptId", getDeptId())
                 .append("userName", getUserName())
                 .append("nickName", getNickName())
                 .append("email", getEmail())
@@ -307,11 +293,16 @@ public class SysUser  extends BaseEntity implements UserDetails{
     @Override
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>(roles.size());
-        for (SysRole role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+        if(roles != null)
+        {
+            List<SimpleGrantedAuthority> authorities = new ArrayList<>(roles.size());
+            System.out.print("-----------------authorities---------------");
+            for (SysRole role : roles) {
+                authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+            }
+            return authorities;
         }
-        return authorities;
+        return  null;
     }
 
     @Override

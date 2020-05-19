@@ -57,7 +57,6 @@ public class CustomTokenService
             String uuid = (String) claims.get(Constants.LOGIN_USER_KEY);
             String userKey = getTokenKey(uuid);
             LoginUser user = redisCache.getCacheObject(userKey);
-            System.out.print(user);
             return user;
         }
         return null;

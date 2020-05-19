@@ -135,7 +135,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     //auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, "admin123"));
                    // LoginUser loginUser = (LoginUser) auth.getPrincipal();
                     LoginUser loginUser = new LoginUser();
-                    sysUser.setPassword("admin123");
                     loginUser.setUser(sysUser);
 
                     // 生成token
