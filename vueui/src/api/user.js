@@ -7,7 +7,6 @@ export function login(data) {
     data
   })
 }
-
 export function getInfo(token) {
   return request({
     // url: '/getrouters',
@@ -16,7 +15,13 @@ export function getInfo(token) {
     params: { token }
   })
 }
-
+export function generateRoutes(token) {
+  return request({
+    url: '/getrouters',
+    method: 'get',
+    params: { token }
+  })
+}
 export function logout() {
   return request({
     url: '/logout',
