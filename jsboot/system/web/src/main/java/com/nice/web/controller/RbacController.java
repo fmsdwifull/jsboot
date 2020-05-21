@@ -9,6 +9,7 @@ import com.sun.corba.se.impl.ior.OldJIDLObjectKeyTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -32,7 +33,8 @@ public class RbacController {
     @GetMapping("/getrouters")
     public AjaxResult getRouters()
     {
-        Long uid = ((SysUser)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUserId();
+        Long uid = ((LoginUser)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser().getUserId();
+        //Long uid = ((SysUser)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUserId();
         List<SysMenu> menus = menuService.selectMenuTreeByUserId(uid);
         return AjaxResult.success(menuService.buildMenus(menus));
     }
@@ -59,5 +61,11 @@ public class RbacController {
         hashMap.put("menus", menus);
         AjaxResult ajax = AjaxResult.success(hashMap);
         return ajax;
+    }
+
+    @RequestMapping("/gethellomodule")
+    public String getHelloModule()
+    {
+        return "---------------gethellomodule--------------------";
     }
 }

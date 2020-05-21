@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nice.model.*;
 import com.nice.service.impl.CustomTokenService;
 import com.nice.service.impl.CustomerUserDetailService;
-import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,11 +14,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.session.SessionRegistryImpl;
-import org.springframework.security.core.token.Token;
-import org.springframework.security.core.token.TokenService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
@@ -28,8 +23,6 @@ import org.springframework.security.web.authentication.session.ConcurrentSession
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import javax.annotation.Resource;
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -43,21 +36,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     CustomUrlDecisionManager customUrlDecisionManager;
     @Autowired
     CustomTokenService tokenService;
-    @Autowired
-    AuthenticationManager authenticationManager;
     //@Autowired
-    //CustomUsernamePasswordAuthentionProvider customUsernamePasswordAuthentionProvider;
+    //AuthenticationManager authenticationManager;
 
     @Bean
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -68,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
                 .antMatchers("/css/**", "/js/**", "/index.html", "/img/**", "/fonts/**", "/favicon.ico", "/verifyCode")
-                .antMatchers("/gethellomulmodule");
+                .antMatchers("/gethellomodule");
     }
 
     @Override
@@ -108,43 +94,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     //response.setHeader("Access-Control-Allow-Origin", "*");
                     //response.setHeader("Access-Control-Allow-Methods", "GET,POST");
                     PrintWriter out = response.getWriter();
-                    SysUser sysUser = (SysUser) authentication.getPrincipal();
-                    String username = sysUser.getUsername();
-                    String password = sysUser.getPassword();
+                    LoginUser loginUser = (LoginUser) authentication.getPrincipal();
 
-                    //sysUser.setPassword(null);
-                    //authentication.getCredentials().
-                    Collection<? extends GrantedAuthority> authorities = sysUser.getAuthorities();
-                    Set<String> roles = new HashSet<>();
-
-                    if (CollectionUtils.isNotEmpty(authorities)) {
-                        for (GrantedAuthority authority : authorities) {
-                            String roleName = authority.getAuthority();
-                            roles.add(roleName);
-                        }
-                    }
-                    //TokenService
-                    //JwtTokenPair  jwtTokenPair = jwtTokenGenerator.jwtTokenPair(username, roles, null);
-
-//                    RespJson ok = RespJson.ok("登录成功!", sysUser);
-//                    String s = new ObjectMapper().writeValueAsString(ok);
+                    //保存token
+                    String token = tokenService.createToken(loginUser);
                     HashMap hashMap = new HashMap();
-
-                    // 用户验证
-                    //Authentication auth = null;
-                    //auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, "admin123"));
-                   // LoginUser loginUser = (LoginUser) auth.getPrincipal();
-                    LoginUser loginUser = new LoginUser();
-                    loginUser.setUser(sysUser);
-
-                    // 生成token
-                     String token = tokenService.createToken(loginUser);
                     hashMap.put("token",token);
                     AjaxResult ajax = AjaxResult.success(hashMap);
                     String s = new ObjectMapper().writeValueAsString(ajax);
-//                  String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),
-//                            loginBody.getUuid());
-//                    ajax.put(Constants.TOKEN, token);
                     out.write(s);
                     out.flush();
                     out.close();
@@ -185,15 +142,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new SessionRegistryImpl();
     }
 
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9527"));
-        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
+//    @Bean
+//    CorsConfigurationSource corsConfigurationSource() {
+//        CorsConfiguration configuration = new CorsConfiguration();
+//        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9527"));
+//        configuration.setAllowedMethods(Arrays.asList("GET","POST"));
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", configuration);
+//        return source;
+//    }
 
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {

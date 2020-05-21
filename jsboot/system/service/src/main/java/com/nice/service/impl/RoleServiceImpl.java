@@ -3,7 +3,6 @@ package com.nice.service.impl;
 import com.nice.common.StringUtils;
 import com.nice.mapper.SysUserRoleMapper;
 import com.nice.model.SysRole;
-import com.nice.model.SysUser;
 import com.nice.service.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
