@@ -1,27 +1,30 @@
 package com.nice.web.controller;
 
+import com.nice.common.Constants;
 import com.nice.common.ServletUtils;
 import com.nice.model.*;
 import com.nice.service.IMenuService;
 import com.nice.service.IRoleService;
+import com.nice.service.IUserService;
 import com.nice.service.impl.CustomTokenService;
 import com.sun.corba.se.impl.ior.OldJIDLObjectKeyTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
 @RestController
-public class RbacController {
+public class UserController {
     @Autowired
     private IMenuService menuService;
     @Autowired
     private IRoleService roleService;
+
+    @Autowired
+    private IUserService iuserService;
 
     @Autowired
     CustomTokenService customTokenService;
@@ -60,6 +63,16 @@ public class RbacController {
         hashMap.put("roles", roles);
         hashMap.put("menus", menus);
         AjaxResult ajax = AjaxResult.success(hashMap);
+        return ajax;
+    }
+
+    @PostMapping("/dosigin")
+    public AjaxResult doSigin(@RequestBody LoginBody loginBody)
+    {
+        AjaxResult ajax = AjaxResult.success();
+        // 生成令牌
+        String token = iuserService.doSigin(loginBody.getUsername(), loginBody.getPassword());
+        ajax.put(Constants.TOKEN, token);
         return ajax;
     }
 

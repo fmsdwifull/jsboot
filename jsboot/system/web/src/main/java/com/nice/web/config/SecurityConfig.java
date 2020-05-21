@@ -20,9 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -70,10 +67,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 })
                 .and()
                 .logout()
+                //.logoutUrl("/my/logout")
+                .logoutSuccessUrl("/logout")
                 .logoutSuccessHandler((req, resp, authentication) -> {
                             resp.setContentType("application/json;charset=utf-8");
                             PrintWriter out = resp.getWriter();
-                            out.write(new ObjectMapper().writeValueAsString(RespJson.ok("注销成功!")));
+                            out.write(new ObjectMapper().writeValueAsString(AjaxResult.success("注销成功!")));
                             out.flush();
                             out.close();
                         }
@@ -81,6 +80,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .csrf().disable();
+//                .exceptionHandling()
+//                //没有认证时，在这里处理结果，不要重定向
+//                .authenticationEntryPoint((req, resp, authException) -> {
+//                            resp.setContentType("application/json;charset=utf-8");
+//                            resp.setStatus(401);
+//                            PrintWriter out = resp.getWriter();
+//                            RespBean respBean = RespBean.error("访问失败!");
+//                            if (authException instanceof InsufficientAuthenticationException) {
+//                                respBean.setMsg("请求失败，请联系管理员!");
+//                            }
+//                            out.write(new ObjectMapper().writeValueAsString(respBean));
+//                            out.flush();
+//                            out.close();
+//                        }
+//                );
         //http.cors(withDefaults());
         //这个是要替代UsernamePasswordAuthenticationFilter吗？还是什么意思
         http.addFilterAt(loginFilter(), UsernamePasswordAuthenticationFilter.class);
@@ -142,7 +156,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new SessionRegistryImpl();
     }
 
-//    @Bean
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    //    @Bean
 //    CorsConfigurationSource corsConfigurationSource() {
 //        CorsConfiguration configuration = new CorsConfiguration();
 //        configuration.setAllowedOrigins(Arrays.asList("http://localhost:9527"));

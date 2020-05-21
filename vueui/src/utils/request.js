@@ -50,7 +50,7 @@ service.interceptors.response.use(
     // if the custom code is not 20000, it is judged as an error.
     if (res.code !== 200) {
       Message({
-        message: res.message || '用户名或者密码输入错误，请重新输入!',
+        message: res.msg || '用户名或者密码输入错误，请重新输入!',
         type: 'error',
         duration: 5 * 1000
       })
